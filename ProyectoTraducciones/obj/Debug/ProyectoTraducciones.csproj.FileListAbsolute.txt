@@ -17,3 +17,13 @@ C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoTraducciones\obj\Debug\Pr
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csproj.CoreCompileInputs.cache
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.exe
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.pdb
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.exe
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.pdb
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\bin\Debug\ProyectoTraducciones.exe.config
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\bin\Debug\ProyectoTraducciones.exe
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\bin\Debug\ProyectoTraducciones.pdb
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.MenuPrincipal.resources
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.Properties.Resources.resources
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csproj.GenerateResource.cache
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csprojAssemblyReference.cache
