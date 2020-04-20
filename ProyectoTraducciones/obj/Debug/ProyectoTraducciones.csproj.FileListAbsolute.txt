@@ -27,3 +27,5 @@ C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTrad
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csproj.GenerateResource.cache
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csproj.CoreCompileInputs.cache
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csprojAssemblyReference.cache
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csproj.CopyComplete
