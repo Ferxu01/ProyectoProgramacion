@@ -36,5 +36,30 @@ namespace ProyectoTraducciones
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
         }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormCrear());
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormEliminar());
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormEditar());
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormBuscar());
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new FormAyuda());
+        }
     }
 }

@@ -26,6 +26,12 @@ C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTrad
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.Properties.Resources.resources
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csproj.GenerateResource.cache
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csproj.CoreCompileInputs.cache
-C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csprojAssemblyReference.cache
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csproj.CopyComplete
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.FormCrear.resources
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.csprojAssemblyReference.cache
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.FormBuscar.resources
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.FormEditar.resources
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.FormEliminar.resources
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.FormEditarCampos.resources
+C:\Users\Fernando\Desktop\ProyectoTraducciones\ProyectoProgramacion\ProyectoTraducciones\obj\Debug\ProyectoTraducciones.FormAyuda.resources

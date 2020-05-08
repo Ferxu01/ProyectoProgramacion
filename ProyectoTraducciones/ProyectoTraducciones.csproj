@@ -49,16 +49,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormAyuda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormAyuda.Designer.cs">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarCampos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarCampos.Designer.cs">
+      <DependentUpon>FormEditarCampos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuPrincipal.Designer.cs">
+      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscar.Designer.cs">
+      <DependentUpon>FormBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCrear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCrear.Designer.cs">
+      <DependentUpon>FormCrear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditar.Designer.cs">
+      <DependentUpon>FormEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEliminar.Designer.cs">
+      <DependentUpon>FormEliminar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormAyuda.resx">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarCampos.resx">
+      <DependentUpon>FormEditarCampos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuPrincipal.resx">
+      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscar.resx">
+      <DependentUpon>FormBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCrear.resx">
+      <DependentUpon>FormCrear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditar.resx">
+      <DependentUpon>FormEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEliminar.resx">
+      <DependentUpon>FormEliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
