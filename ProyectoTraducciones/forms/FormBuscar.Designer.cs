@@ -89,7 +89,7 @@
             this.dropDownTipoBuscar.Location = new System.Drawing.Point(140, 143);
             this.dropDownTipoBuscar.Name = "dropDownTipoBuscar";
             this.dropDownTipoBuscar.Size = new System.Drawing.Size(197, 21);
-            this.dropDownTipoBuscar.TabIndex = 8;
+            this.dropDownTipoBuscar.TabIndex = 1;
             // 
             // labelDropDownTipoBuscar
             // 
@@ -106,7 +106,7 @@
             this.listaMostrarTraduccionBuscada.Location = new System.Drawing.Point(43, 227);
             this.listaMostrarTraduccionBuscada.Name = "listaMostrarTraduccionBuscada";
             this.listaMostrarTraduccionBuscada.Size = new System.Drawing.Size(498, 160);
-            this.listaMostrarTraduccionBuscada.TabIndex = 6;
+            this.listaMostrarTraduccionBuscada.TabIndex = 3;
             // 
             // dropDownIdiomaBuscar
             // 
@@ -114,7 +114,7 @@
             this.dropDownIdiomaBuscar.Location = new System.Drawing.Point(140, 95);
             this.dropDownIdiomaBuscar.Name = "dropDownIdiomaBuscar";
             this.dropDownIdiomaBuscar.Size = new System.Drawing.Size(197, 21);
-            this.dropDownIdiomaBuscar.TabIndex = 5;
+            this.dropDownIdiomaBuscar.TabIndex = 0;
             // 
             // labelDropDownIdiomaBuscar
             // 
@@ -139,7 +139,7 @@
             this.btnBuscarTraduccion.Location = new System.Drawing.Point(453, 404);
             this.btnBuscarTraduccion.Name = "btnBuscarTraduccion";
             this.btnBuscarTraduccion.Size = new System.Drawing.Size(88, 31);
-            this.btnBuscarTraduccion.TabIndex = 2;
+            this.btnBuscarTraduccion.TabIndex = 5;
             this.btnBuscarTraduccion.Text = "Buscar";
             this.btnBuscarTraduccion.UseVisualStyleBackColor = true;
             // 
@@ -148,7 +148,7 @@
             this.nombreOriginalTraduccionBuscar.Location = new System.Drawing.Point(140, 195);
             this.nombreOriginalTraduccionBuscar.Name = "nombreOriginalTraduccionBuscar";
             this.nombreOriginalTraduccionBuscar.Size = new System.Drawing.Size(197, 20);
-            this.nombreOriginalTraduccionBuscar.TabIndex = 0;
+            this.nombreOriginalTraduccionBuscar.TabIndex = 2;
             // 
             // FormBuscar
             // 

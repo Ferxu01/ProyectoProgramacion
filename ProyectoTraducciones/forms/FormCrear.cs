@@ -21,5 +21,13 @@ namespace ProyectoTraducciones
         {
             this.Close();
         }
+
+        private void btnBorrarDatos_Click(object sender, EventArgs e)
+        {
+            palabraOriginal.Clear();
+            palabraTraducida.Clear();
+            dropDownIdiomaCrear.ResetText();
+            dropDownTipoCrear.ResetText();
+        }
     }
 }

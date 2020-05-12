@@ -105,7 +105,7 @@
             this.nombreTraduccionFiltrar.Location = new System.Drawing.Point(386, 117);
             this.nombreTraduccionFiltrar.Name = "nombreTraduccionFiltrar";
             this.nombreTraduccionFiltrar.Size = new System.Drawing.Size(155, 20);
-            this.nombreTraduccionFiltrar.TabIndex = 8;
+            this.nombreTraduccionFiltrar.TabIndex = 2;
             // 
             // dropDownIdiomaSeleccionarEditar
             // 
@@ -113,7 +113,7 @@
             this.dropDownIdiomaSeleccionarEditar.Location = new System.Drawing.Point(34, 117);
             this.dropDownIdiomaSeleccionarEditar.Name = "dropDownIdiomaSeleccionarEditar";
             this.dropDownIdiomaSeleccionarEditar.Size = new System.Drawing.Size(152, 21);
-            this.dropDownIdiomaSeleccionarEditar.TabIndex = 7;
+            this.dropDownIdiomaSeleccionarEditar.TabIndex = 0;
             // 
             // dropDownTipoSeleccionarEditar
             // 
@@ -121,14 +121,14 @@
             this.dropDownTipoSeleccionarEditar.Location = new System.Drawing.Point(209, 117);
             this.dropDownTipoSeleccionarEditar.Name = "dropDownTipoSeleccionarEditar";
             this.dropDownTipoSeleccionarEditar.Size = new System.Drawing.Size(147, 21);
-            this.dropDownTipoSeleccionarEditar.TabIndex = 6;
+            this.dropDownTipoSeleccionarEditar.TabIndex = 1;
             // 
             // btnSeleccionarTraduccionEditar
             // 
             this.btnSeleccionarTraduccionEditar.Location = new System.Drawing.Point(439, 387);
             this.btnSeleccionarTraduccionEditar.Name = "btnSeleccionarTraduccionEditar";
             this.btnSeleccionarTraduccionEditar.Size = new System.Drawing.Size(102, 31);
-            this.btnSeleccionarTraduccionEditar.TabIndex = 5;
+            this.btnSeleccionarTraduccionEditar.TabIndex = 4;
             this.btnSeleccionarTraduccionEditar.Text = "Seleccionar";
             this.btnSeleccionarTraduccionEditar.UseVisualStyleBackColor = true;
             // 
@@ -138,7 +138,7 @@
             this.listaSeleccionarTraduccionEditar.Location = new System.Drawing.Point(34, 163);
             this.listaSeleccionarTraduccionEditar.Name = "listaSeleccionarTraduccionEditar";
             this.listaSeleccionarTraduccionEditar.Size = new System.Drawing.Size(507, 212);
-            this.listaSeleccionarTraduccionEditar.TabIndex = 4;
+            this.listaSeleccionarTraduccionEditar.TabIndex = 3;
             // 
             // tituloSeleccionarTraduccionEditar
             // 

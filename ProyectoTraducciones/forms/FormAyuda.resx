@@ -117,4 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="labelContenidoAyuda.Text" xml:space="preserve">
+    <value>Esta aplicación tiene varias funciones como son crear, eliminar, editar y buscar traducciones.
+
+Para crear una traducción tendrás que introducir el nombre original y el traducido, aparte 
+de seleccionar el idioma y el tipo al que pertenece.
+
+Para eliminarla, tan solo tendrás que filtrar la traducción por el idioma y tipo, y después ya 
+podrás seleccionarla y eliminarla.
+
+Si desea editar una traducción, tendrás que filtrar la traducción por el idioma y tipo, 
+y seleccionar la traducción que quieras editar. Después, aparecerán los datos de la 
+traducción en un formulario para que pueda ser modificada.
+
+Pero si simplemente desea buscar una traducción, tan solo necesitará filtrarla por el idioma 
+y el tipo y después escribir el nombre de la traducción que quiere encontrar para encontrar 
+la traducción deseada.
+
+</value>
+  </data>
 </root>

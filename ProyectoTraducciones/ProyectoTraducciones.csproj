@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clases\Ciencia.cs" />
     <Compile Include="clases\ListaTraducciones.cs" />
     <Compile Include="clases\Traduccion.cs" />
     <Compile Include="clases\TraduccionIngles.cs" />

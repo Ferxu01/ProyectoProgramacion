@@ -86,7 +86,7 @@
             this.btnEliminarTraduccion.Location = new System.Drawing.Point(462, 419);
             this.btnEliminarTraduccion.Name = "btnEliminarTraduccion";
             this.btnEliminarTraduccion.Size = new System.Drawing.Size(93, 28);
-            this.btnEliminarTraduccion.TabIndex = 5;
+            this.btnEliminarTraduccion.TabIndex = 3;
             this.btnEliminarTraduccion.Text = "Eliminar";
             this.btnEliminarTraduccion.UseVisualStyleBackColor = true;
             // 
@@ -97,7 +97,7 @@
             this.listaEliminarTraduccion.Location = new System.Drawing.Point(18, 162);
             this.listaEliminarTraduccion.Name = "listaEliminarTraduccion";
             this.listaEliminarTraduccion.Size = new System.Drawing.Size(537, 238);
-            this.listaEliminarTraduccion.TabIndex = 4;
+            this.listaEliminarTraduccion.TabIndex = 2;
             // 
             // labelDropDownIdiomaEliminar
             // 
@@ -114,7 +114,7 @@
             this.dropDownIdiomaEliminar.Location = new System.Drawing.Point(68, 119);
             this.dropDownIdiomaEliminar.Name = "dropDownIdiomaEliminar";
             this.dropDownIdiomaEliminar.Size = new System.Drawing.Size(174, 21);
-            this.dropDownIdiomaEliminar.TabIndex = 2;
+            this.dropDownIdiomaEliminar.TabIndex = 0;
             // 
             // labelDropDownTipoEliminar
             // 
@@ -131,7 +131,7 @@
             this.dropDownTipoEliminar.Location = new System.Drawing.Point(309, 119);
             this.dropDownTipoEliminar.Name = "dropDownTipoEliminar";
             this.dropDownTipoEliminar.Size = new System.Drawing.Size(177, 21);
-            this.dropDownTipoEliminar.TabIndex = 0;
+            this.dropDownTipoEliminar.TabIndex = 1;
             // 
             // FormEliminar
             // 

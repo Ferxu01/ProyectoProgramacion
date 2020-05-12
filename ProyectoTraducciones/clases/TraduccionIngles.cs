@@ -10,8 +10,8 @@ namespace ProyectoTraducciones.clases
     {
         protected string rutaIdioma;
 
-        public TraduccionIngles(int codigo, string original, string traducida, string idioma, string tipo) 
-            :base(codigo, original, traducida, idioma, tipo)
+        public TraduccionIngles(int codigo, string original, string traducida, string idioma, int codigoTipo) 
+            :base(codigo, original, traducida, idioma, codigoTipo)
         {
             rutaIdioma = "/English";
         }

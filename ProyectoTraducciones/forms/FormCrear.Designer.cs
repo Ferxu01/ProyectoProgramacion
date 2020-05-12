@@ -65,9 +65,10 @@
             this.btnBorrarDatos.Location = new System.Drawing.Point(414, 400);
             this.btnBorrarDatos.Name = "btnBorrarDatos";
             this.btnBorrarDatos.Size = new System.Drawing.Size(82, 28);
-            this.btnBorrarDatos.TabIndex = 1;
+            this.btnBorrarDatos.TabIndex = 5;
             this.btnBorrarDatos.Text = "Borrar";
             this.btnBorrarDatos.UseVisualStyleBackColor = true;
+            this.btnBorrarDatos.Click += new System.EventHandler(this.btnBorrarDatos_Click);
             // 
             // btnAddTraduccion
             // 
@@ -76,7 +77,7 @@
             this.btnAddTraduccion.Location = new System.Drawing.Point(313, 400);
             this.btnAddTraduccion.Name = "btnAddTraduccion";
             this.btnAddTraduccion.Size = new System.Drawing.Size(82, 28);
-            this.btnAddTraduccion.TabIndex = 2;
+            this.btnAddTraduccion.TabIndex = 4;
             this.btnAddTraduccion.Text = "Añadir";
             this.btnAddTraduccion.UseVisualStyleBackColor = true;
             // 
@@ -115,7 +116,7 @@
             this.dropDownIdiomaCrear.Location = new System.Drawing.Point(147, 256);
             this.dropDownIdiomaCrear.Name = "dropDownIdiomaCrear";
             this.dropDownIdiomaCrear.Size = new System.Drawing.Size(200, 21);
-            this.dropDownIdiomaCrear.TabIndex = 7;
+            this.dropDownIdiomaCrear.TabIndex = 2;
             // 
             // labelDropDownTipoCrear
             // 
@@ -133,7 +134,7 @@
             this.dropDownTipoCrear.Location = new System.Drawing.Point(147, 318);
             this.dropDownTipoCrear.Name = "dropDownTipoCrear";
             this.dropDownTipoCrear.Size = new System.Drawing.Size(200, 21);
-            this.dropDownTipoCrear.TabIndex = 5;
+            this.dropDownTipoCrear.TabIndex = 3;
             // 
             // labelTraducida
             // 
@@ -150,7 +151,7 @@
             this.palabraTraducida.Location = new System.Drawing.Point(147, 199);
             this.palabraTraducida.Name = "palabraTraducida";
             this.palabraTraducida.Size = new System.Drawing.Size(223, 20);
-            this.palabraTraducida.TabIndex = 3;
+            this.palabraTraducida.TabIndex = 1;
             // 
             // tituloFormularioCrear
             // 

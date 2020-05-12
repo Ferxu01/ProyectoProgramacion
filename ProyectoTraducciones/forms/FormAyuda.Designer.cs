@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAyuda));
             this.btnCerrarFormulario = new System.Windows.Forms.Button();
             this.tituloAyuda = new System.Windows.Forms.Label();
+            this.labelContenidoAyuda = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCerrarFormulario
@@ -51,17 +53,30 @@
             this.tituloAyuda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tituloAyuda.AutoSize = true;
             this.tituloAyuda.Font = new System.Drawing.Font("Arial", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloAyuda.Location = new System.Drawing.Point(249, 40);
+            this.tituloAyuda.Location = new System.Drawing.Point(259, 40);
             this.tituloAyuda.Name = "tituloAyuda";
             this.tituloAyuda.Size = new System.Drawing.Size(178, 61);
             this.tituloAyuda.TabIndex = 21;
             this.tituloAyuda.Text = "Ayuda";
+            // 
+            // labelContenidoAyuda
+            // 
+            this.labelContenidoAyuda.AutoSize = true;
+            this.labelContenidoAyuda.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContenidoAyuda.Location = new System.Drawing.Point(70, 149);
+            this.labelContenidoAyuda.Name = "labelContenidoAyuda";
+            this.labelContenidoAyuda.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelContenidoAyuda.Size = new System.Drawing.Size(649, 288);
+            this.labelContenidoAyuda.TabIndex = 0;
+            this.labelContenidoAyuda.Text = resources.GetString("labelContenidoAyuda.Text");
+            this.labelContenidoAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormAyuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 520);
+            this.Controls.Add(this.labelContenidoAyuda);
             this.Controls.Add(this.tituloAyuda);
             this.Controls.Add(this.btnCerrarFormulario);
             this.Name = "FormAyuda";
@@ -75,5 +90,6 @@
 
         private System.Windows.Forms.Button btnCerrarFormulario;
         private System.Windows.Forms.Label tituloAyuda;
+        private System.Windows.Forms.Label labelContenidoAyuda;
     }
 }

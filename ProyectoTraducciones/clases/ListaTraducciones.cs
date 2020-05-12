@@ -9,10 +9,12 @@ namespace ProyectoTraducciones.clases
     public class ListaTraducciones
     {
         Dictionary<int,Traduccion> listaTraducciones;
+        Dictionary<int,string> listaCodigosTipo;
 
         public ListaTraducciones()
         {
-            listaTraducciones = new Dictionary<int, Traduccion>();
+            listaTraducciones = new Dictionary<int,Traduccion>();
+            listaCodigosTipo = new Dictionary<int,string>();
         }
 
         public void Add(Traduccion traduccion)
