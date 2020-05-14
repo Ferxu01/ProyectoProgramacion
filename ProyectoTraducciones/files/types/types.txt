@@ -1,0 +1,3 @@
+0;Ciencia
+1;Literatura
+2;Deporte

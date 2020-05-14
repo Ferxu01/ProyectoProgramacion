@@ -80,6 +80,7 @@
             this.btnAddTraduccion.TabIndex = 4;
             this.btnAddTraduccion.Text = "Añadir";
             this.btnAddTraduccion.UseVisualStyleBackColor = true;
+            this.btnAddTraduccion.Click += new System.EventHandler(this.btnAddTraduccion_Click);
             // 
             // panelCrearTraduccion
             // 

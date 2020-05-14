@@ -12,17 +12,17 @@ namespace ProyectoTraducciones.clases
         protected string nomOriginal;
         protected string nomTraducida;
         protected string rutaActual;
-        protected string idioma;
-        protected int codigoTipo;
+        protected int idioma;
+        protected int tipo;
 
-        public Traduccion(int codigo,string original, string traducida, string idioma, int codTipo)
+        public Traduccion(int codigo,string original, string traducida, int idioma, int tipo)
         {
-            this.codigo = codigo; //Atributo opcional
+            this.codigo = codigo; //Opcional en constructor
             nomOriginal = original;
             nomTraducida = traducida;
             rutaActual = @"./../../files";
             this.idioma = idioma;
-            codigoTipo = codTipo;
+            this.tipo = tipo;
         }
 
         public int Codigo
@@ -48,17 +48,16 @@ namespace ProyectoTraducciones.clases
             set { rutaActual = value; }
         }
 
-        public string Idioma
+        public int Idioma
         {
             get { return idioma; }
             set { idioma = value; }
         }
 
-        public int CodigoTipo
+        public int Tipo
         {
-            get { return codigoTipo; }
-            set { codigoTipo = value; }
+            get { return tipo; }
+            set { tipo = value; }
         }
-
     }
 }

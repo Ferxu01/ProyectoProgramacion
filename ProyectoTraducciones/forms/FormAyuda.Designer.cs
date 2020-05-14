@@ -53,7 +53,7 @@
             this.tituloAyuda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tituloAyuda.AutoSize = true;
             this.tituloAyuda.Font = new System.Drawing.Font("Arial", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tituloAyuda.Location = new System.Drawing.Point(259, 40);
+            this.tituloAyuda.Location = new System.Drawing.Point(276, 40);
             this.tituloAyuda.Name = "tituloAyuda";
             this.tituloAyuda.Size = new System.Drawing.Size(178, 61);
             this.tituloAyuda.TabIndex = 21;
@@ -61,9 +61,10 @@
             // 
             // labelContenidoAyuda
             // 
+            this.labelContenidoAyuda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelContenidoAyuda.AutoSize = true;
             this.labelContenidoAyuda.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelContenidoAyuda.Location = new System.Drawing.Point(70, 149);
+            this.labelContenidoAyuda.Location = new System.Drawing.Point(110, 149);
             this.labelContenidoAyuda.Name = "labelContenidoAyuda";
             this.labelContenidoAyuda.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelContenidoAyuda.Size = new System.Drawing.Size(649, 288);
