@@ -24,17 +24,17 @@ namespace ProyectoTraducciones
 
         private void CargarDesplegableIdiomas(ListaTraducciones lista)
         {
-            foreach (KeyValuePair<int, string> list in lista.CargarListaIdiomas())
+            foreach (string linea in lista.CargarListaIdiomas())
             {
-                dropDownIdiomaCrear.Items.Add(list.Value);
+                dropDownIdiomaCrear.Items.Add(linea);
             }
         }
 
         private void CargarDesplegableTipos(ListaTraducciones lista)
         {
-            foreach (KeyValuePair<int,string> list in lista.CargarListaTipos())
+            foreach (string linea in lista.CargarListaTipos())
             {
-                dropDownTipoCrear.Items.Add(list.Value);
+                dropDownTipoCrear.Items.Add(linea);
             }
         }
 
@@ -54,7 +54,6 @@ namespace ProyectoTraducciones
         private void btnAddTraduccion_Click(object sender, EventArgs e)
         {
             int codigo = 0;
-            Traduccion traduccionCrear;
             ListaTraducciones listaTrad;
 
             string original = palabraOriginal.Text;
@@ -64,11 +63,21 @@ namespace ProyectoTraducciones
 
             codigo += 1;
 
-            traduccionCrear = new TraduccionIngles(codigo,original,traducida,indexIdioma,indexTipo);
+            DialogResult dialogo;
             listaTrad = new ListaTraducciones();
-            listaTrad.Add(traduccionCrear);
 
-
+            //Crea el objeto del idioma que se haya elegido y lo añade al diccionario
+            if (original != "" && traducida != "" && indexIdioma != null && indexTipo != null)
+            {
+                listaTrad.Add(listaTrad.SeleccionarIdiomaCrear(indexIdioma, original, traducida, indexTipo, codigo));
+                //Ventana de informacion correcta
+                dialogo = MessageBox.Show("Traducción creada con éxito","Información");
+            }
+            else
+            {
+                //Ventana de error
+                dialogo = MessageBox.Show("No se pudo crear la traducción","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

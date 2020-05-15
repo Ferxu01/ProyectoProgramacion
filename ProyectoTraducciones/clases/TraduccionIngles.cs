@@ -8,10 +8,13 @@ namespace ProyectoTraducciones.clases
 {
     public class TraduccionIngles : Traduccion
     {
-        public TraduccionIngles(int codigo, string original, string traducida, int idioma, int tipo) 
+        //Pensar un atributo que poner
+
+        public TraduccionIngles(int codigo, string original, string traducida, string idioma, string tipo) 
             :base(codigo, original, traducida, idioma, tipo)
         {
             rutaActual+="/English";
+            //SetRutaTipoFichero(tipo);
         }
     }
 }

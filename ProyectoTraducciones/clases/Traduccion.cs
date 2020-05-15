@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,15 +13,15 @@ namespace ProyectoTraducciones.clases
         protected string nomOriginal;
         protected string nomTraducida;
         protected string rutaActual;
-        protected int idioma;
-        protected int tipo;
+        protected string idioma;
+        protected string tipo;
 
-        public Traduccion(int codigo,string original, string traducida, int idioma, int tipo)
+        public Traduccion(int codigo, string original, string traducida, string idioma, string tipo)
         {
             this.codigo = codigo; //Opcional en constructor
             nomOriginal = original;
             nomTraducida = traducida;
-            rutaActual = @"./../../files";
+            rutaActual = "./../../files";
             this.idioma = idioma;
             this.tipo = tipo;
         }
@@ -48,16 +49,45 @@ namespace ProyectoTraducciones.clases
             set { rutaActual = value; }
         }
 
-        public int Idioma
+        public string Idioma
         {
             get { return idioma; }
             set { idioma = value; }
         }
 
-        public int Tipo
+        public string Tipo
         {
             get { return tipo; }
             set { tipo = value; }
+        }
+
+        public string SetRutaFichero(string idioma, string tipo)
+        {
+            /*switch (idioma)
+            {
+                case "English":
+                    rutaActual += "/English";
+                    break;
+                default:
+                    break;
+            }*/
+
+            switch (tipo)
+            {
+                case "Ciencia":
+                    rutaActual += "/Ciencia/ciencia.txt";
+                    break;
+                case "Literatura":
+                    rutaActual += "/Literatura/literatura.txt";
+                    break;
+                case "Deporte":
+                    rutaActual += "/Deporte/deporte.txt";
+                    break;
+                default:
+                    break;
+            }
+
+            return rutaActual;
         }
     }
 }
