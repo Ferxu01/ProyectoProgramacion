@@ -28,7 +28,7 @@ namespace ProyectoTraducciones.clases
         {
             listaTraducciones.Add(traduccion.Codigo,traduccion);
 
-            GuardarTraducciones(traduccion.Idioma,traduccion.Tipo,traduccion);
+            //GuardarTraducciones(traduccion.Idioma,traduccion.Tipo,traduccion);
         }
 
         public void Borrar(int codigo)
@@ -135,8 +135,8 @@ namespace ProyectoTraducciones.clases
 
         public void GuardarTraducciones(string idioma, string tipo, Traduccion traduccion)
         {
-            string ruta = traduccion.SetRutaFichero(idioma,tipo);
-            Console.WriteLine(ruta);
+            string ruta = traduccion.SetRutaFichero(tipo);
+            
             StreamWriter fichero = File.CreateText(@ruta);
 
             foreach (KeyValuePair<int,Traduccion> lista in listaTraducciones)
@@ -147,7 +147,7 @@ namespace ProyectoTraducciones.clases
             fichero.Close();
         }
 
-        public void CargarTraducciones(string rutaFichero) //De momento no verlo
+        /*public void CargarTraducciones(string rutaFichero)
         {
             string linea;
 
@@ -171,6 +171,6 @@ namespace ProyectoTraducciones.clases
             catch (IOException)
             {
             }
-        }
+        }*/
     }
 }

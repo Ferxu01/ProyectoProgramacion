@@ -113,6 +113,7 @@
             // 
             // dropDownIdiomaCrear
             // 
+            this.dropDownIdiomaCrear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownIdiomaCrear.FormattingEnabled = true;
             this.dropDownIdiomaCrear.Location = new System.Drawing.Point(147, 256);
             this.dropDownIdiomaCrear.Name = "dropDownIdiomaCrear";
@@ -131,6 +132,7 @@
             // 
             // dropDownTipoCrear
             // 
+            this.dropDownTipoCrear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownTipoCrear.FormattingEnabled = true;
             this.dropDownTipoCrear.Location = new System.Drawing.Point(147, 318);
             this.dropDownTipoCrear.Name = "dropDownTipoCrear";

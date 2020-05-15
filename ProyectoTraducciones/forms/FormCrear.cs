@@ -28,6 +28,8 @@ namespace ProyectoTraducciones
             {
                 dropDownIdiomaCrear.Items.Add(linea);
             }
+
+            dropDownIdiomaCrear.SelectedIndex = 0;
         }
 
         private void CargarDesplegableTipos(ListaTraducciones lista)
@@ -36,6 +38,8 @@ namespace ProyectoTraducciones
             {
                 dropDownTipoCrear.Items.Add(linea);
             }
+
+            dropDownTipoCrear.SelectedIndex = 0;
         }
 
         private void btnCerrarFormulario_Click(object sender, EventArgs e)
@@ -47,8 +51,8 @@ namespace ProyectoTraducciones
         {
             palabraOriginal.Clear();
             palabraTraducida.Clear();
-            dropDownIdiomaCrear.ResetText();
-            dropDownTipoCrear.ResetText();
+            dropDownIdiomaCrear.SelectedIndex = 0;
+            dropDownTipoCrear.SelectedIndex = 0;
         }
 
         private void btnAddTraduccion_Click(object sender, EventArgs e)

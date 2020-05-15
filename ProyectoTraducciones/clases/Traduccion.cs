@@ -61,7 +61,7 @@ namespace ProyectoTraducciones.clases
             set { tipo = value; }
         }
 
-        public string SetRutaFichero(string idioma, string tipo)
+        public string SetRutaFichero(string tipo)
         {
             /*switch (idioma)
             {

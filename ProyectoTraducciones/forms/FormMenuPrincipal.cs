@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoTraducciones.clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,8 @@ namespace ProyectoTraducciones
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
+            ListaTraducciones lista = new ListaTraducciones();
+            lista.CargarTraducciones();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
