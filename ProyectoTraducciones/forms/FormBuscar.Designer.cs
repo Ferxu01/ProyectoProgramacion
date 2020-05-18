@@ -85,6 +85,7 @@
             // 
             // dropDownTipoBuscar
             // 
+            this.dropDownTipoBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownTipoBuscar.FormattingEnabled = true;
             this.dropDownTipoBuscar.Location = new System.Drawing.Point(140, 143);
             this.dropDownTipoBuscar.Name = "dropDownTipoBuscar";
@@ -110,6 +111,7 @@
             // 
             // dropDownIdiomaBuscar
             // 
+            this.dropDownIdiomaBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownIdiomaBuscar.FormattingEnabled = true;
             this.dropDownIdiomaBuscar.Location = new System.Drawing.Point(140, 95);
             this.dropDownIdiomaBuscar.Name = "dropDownIdiomaBuscar";

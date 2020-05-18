@@ -128,6 +128,7 @@
             // 
             // dropDownIdiomaEditar
             // 
+            this.dropDownIdiomaEditar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownIdiomaEditar.FormattingEnabled = true;
             this.dropDownIdiomaEditar.Location = new System.Drawing.Point(139, 289);
             this.dropDownIdiomaEditar.Name = "dropDownIdiomaEditar";
@@ -146,6 +147,7 @@
             // 
             // dropDownTipoEditar
             // 
+            this.dropDownTipoEditar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownTipoEditar.FormattingEnabled = true;
             this.dropDownTipoEditar.Location = new System.Drawing.Point(139, 351);
             this.dropDownTipoEditar.Name = "dropDownTipoEditar";

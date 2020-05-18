@@ -30,9 +30,12 @@
         {
             this.btnCerrarFormulario = new System.Windows.Forms.Button();
             this.panelEliminarTraduccion = new System.Windows.Forms.Panel();
+            this.listaEliminarTraduccion = new System.Windows.Forms.ListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tradOriginal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tradTraducida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tituloFormularioEliminar = new System.Windows.Forms.Label();
             this.btnEliminarTraduccion = new System.Windows.Forms.Button();
-            this.listaEliminarTraduccion = new System.Windows.Forms.ListBox();
             this.labelDropDownIdiomaEliminar = new System.Windows.Forms.Label();
             this.dropDownIdiomaEliminar = new System.Windows.Forms.ComboBox();
             this.labelDropDownTipoEliminar = new System.Windows.Forms.Label();
@@ -57,9 +60,9 @@
             // panelEliminarTraduccion
             // 
             this.panelEliminarTraduccion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelEliminarTraduccion.Controls.Add(this.listaEliminarTraduccion);
             this.panelEliminarTraduccion.Controls.Add(this.tituloFormularioEliminar);
             this.panelEliminarTraduccion.Controls.Add(this.btnEliminarTraduccion);
-            this.panelEliminarTraduccion.Controls.Add(this.listaEliminarTraduccion);
             this.panelEliminarTraduccion.Controls.Add(this.labelDropDownIdiomaEliminar);
             this.panelEliminarTraduccion.Controls.Add(this.dropDownIdiomaEliminar);
             this.panelEliminarTraduccion.Controls.Add(this.labelDropDownTipoEliminar);
@@ -68,6 +71,37 @@
             this.panelEliminarTraduccion.Name = "panelEliminarTraduccion";
             this.panelEliminarTraduccion.Size = new System.Drawing.Size(611, 454);
             this.panelEliminarTraduccion.TabIndex = 2;
+            // 
+            // listaEliminarTraduccion
+            // 
+            this.listaEliminarTraduccion.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.id,
+            this.tradOriginal,
+            this.tradTraducida});
+            this.listaEliminarTraduccion.HideSelection = false;
+            this.listaEliminarTraduccion.Location = new System.Drawing.Point(18, 162);
+            this.listaEliminarTraduccion.Name = "listaEliminarTraduccion";
+            this.listaEliminarTraduccion.Size = new System.Drawing.Size(537, 240);
+            this.listaEliminarTraduccion.TabIndex = 7;
+            this.listaEliminarTraduccion.UseCompatibleStateImageBehavior = false;
+            this.listaEliminarTraduccion.View = System.Windows.Forms.View.Details;
+            // 
+            // id
+            // 
+            this.id.Text = "Id";
+            this.id.Width = 44;
+            // 
+            // tradOriginal
+            // 
+            this.tradOriginal.Text = "Original";
+            this.tradOriginal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tradOriginal.Width = 174;
+            // 
+            // tradTraducida
+            // 
+            this.tradTraducida.Text = "Traducida";
+            this.tradTraducida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tradTraducida.Width = 171;
             // 
             // tituloFormularioEliminar
             // 
@@ -89,15 +123,7 @@
             this.btnEliminarTraduccion.TabIndex = 3;
             this.btnEliminarTraduccion.Text = "Eliminar";
             this.btnEliminarTraduccion.UseVisualStyleBackColor = true;
-            // 
-            // listaEliminarTraduccion
-            // 
-            this.listaEliminarTraduccion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.listaEliminarTraduccion.FormattingEnabled = true;
-            this.listaEliminarTraduccion.Location = new System.Drawing.Point(18, 162);
-            this.listaEliminarTraduccion.Name = "listaEliminarTraduccion";
-            this.listaEliminarTraduccion.Size = new System.Drawing.Size(537, 238);
-            this.listaEliminarTraduccion.TabIndex = 2;
+            this.btnEliminarTraduccion.Click += new System.EventHandler(this.btnEliminarTraduccion_Click);
             // 
             // labelDropDownIdiomaEliminar
             // 
@@ -110,6 +136,7 @@
             // 
             // dropDownIdiomaEliminar
             // 
+            this.dropDownIdiomaEliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownIdiomaEliminar.FormattingEnabled = true;
             this.dropDownIdiomaEliminar.Location = new System.Drawing.Point(68, 119);
             this.dropDownIdiomaEliminar.Name = "dropDownIdiomaEliminar";
@@ -127,6 +154,7 @@
             // 
             // dropDownTipoEliminar
             // 
+            this.dropDownTipoEliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownTipoEliminar.FormattingEnabled = true;
             this.dropDownTipoEliminar.Location = new System.Drawing.Point(309, 119);
             this.dropDownTipoEliminar.Name = "dropDownTipoEliminar";
@@ -156,8 +184,11 @@
         private System.Windows.Forms.ComboBox dropDownIdiomaEliminar;
         private System.Windows.Forms.Label labelDropDownTipoEliminar;
         private System.Windows.Forms.ComboBox dropDownTipoEliminar;
-        private System.Windows.Forms.ListBox listaEliminarTraduccion;
         private System.Windows.Forms.Button btnEliminarTraduccion;
         private System.Windows.Forms.Label tituloFormularioEliminar;
+        private System.Windows.Forms.ListView listaEliminarTraduccion;
+        private System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader tradOriginal;
+        private System.Windows.Forms.ColumnHeader tradTraducida;
     }
 }

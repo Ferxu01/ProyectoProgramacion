@@ -109,6 +109,7 @@
             // 
             // dropDownIdiomaSeleccionarEditar
             // 
+            this.dropDownIdiomaSeleccionarEditar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownIdiomaSeleccionarEditar.FormattingEnabled = true;
             this.dropDownIdiomaSeleccionarEditar.Location = new System.Drawing.Point(34, 117);
             this.dropDownIdiomaSeleccionarEditar.Name = "dropDownIdiomaSeleccionarEditar";
@@ -117,6 +118,7 @@
             // 
             // dropDownTipoSeleccionarEditar
             // 
+            this.dropDownTipoSeleccionarEditar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownTipoSeleccionarEditar.FormattingEnabled = true;
             this.dropDownTipoSeleccionarEditar.Location = new System.Drawing.Point(209, 117);
             this.dropDownTipoSeleccionarEditar.Name = "dropDownTipoSeleccionarEditar";

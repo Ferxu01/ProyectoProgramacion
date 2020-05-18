@@ -37,6 +37,7 @@ namespace ProyectoTraducciones
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
             ListaTraducciones lista = new ListaTraducciones();
+            //Las traducciones se cargan pero cuando se quieren utilizar no aparecer en el dictionary
             lista.CargarTraducciones();
         }
 
@@ -63,6 +64,17 @@ namespace ProyectoTraducciones
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new FormAyuda());
+        }
+
+        private void GuardarDatos(object sender, FormClosingEventArgs e)
+        {
+            DialogResult ventana = MessageBox.Show("¿Está seguro de que quiere cerrar el programa?", "Cerrar",
+                MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+
+            if (ventana == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

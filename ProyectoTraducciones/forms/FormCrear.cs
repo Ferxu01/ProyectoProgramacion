@@ -13,10 +13,13 @@ namespace ProyectoTraducciones
 {
     public partial class FormCrear : Form
     {
+        ListaTraducciones lista;
+        int codigo = 0;
+
         public FormCrear()
         {
             InitializeComponent();
-            ListaTraducciones lista = new ListaTraducciones();
+            lista = new ListaTraducciones();
 
             CargarDesplegableIdiomas(lista);
             CargarDesplegableTipos(lista);
@@ -57,8 +60,7 @@ namespace ProyectoTraducciones
 
         private void btnAddTraduccion_Click(object sender, EventArgs e)
         {
-            int codigo = 0;
-            ListaTraducciones listaTrad;
+            
 
             string original = palabraOriginal.Text;
             string traducida = palabraTraducida.Text;
@@ -68,14 +70,13 @@ namespace ProyectoTraducciones
             codigo += 1;
 
             DialogResult dialogo;
-            listaTrad = new ListaTraducciones();
 
             //Crea el objeto del idioma que se haya elegido y lo añade al diccionario
             if (original != "" && traducida != "" && indexIdioma != null && indexTipo != null)
             {
-                listaTrad.Add(listaTrad.SeleccionarIdiomaCrear(indexIdioma, original, traducida, indexTipo, codigo));
+                lista.Add(lista.SeleccionarIdiomaCrear(indexIdioma, original, traducida, indexTipo, codigo));
                 //Ventana de informacion correcta
-                dialogo = MessageBox.Show("Traducción creada con éxito","Información");
+                dialogo = MessageBox.Show("Traducción creada con éxito","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             else
             {

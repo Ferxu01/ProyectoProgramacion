@@ -61,7 +61,7 @@ namespace ProyectoTraducciones.clases
             set { tipo = value; }
         }
 
-        public string SetRutaFichero(string tipo)
+        public string SetRutaFicheroIdioma(string tipo)
         {
             /*switch (idioma)
             {
@@ -89,5 +89,59 @@ namespace ProyectoTraducciones.clases
 
             return rutaActual;
         }
+
+        public string SetRutaFicheroEspanyol(string tipo)
+        {
+            string ruta = "./../../files";
+
+            switch (tipo)
+            {
+                case "Ciencia":
+                    ruta += "/Spanish/Ciencia/ciencia.txt";
+                    break;
+                case "Literatura":
+                    ruta += "/Spanish/Literatura/literatura.txt";
+                    break;
+                case "Deporte":
+                    ruta += "/Spanish/Deporte/deporte.txt";
+                    break;
+                default:
+                    break;
+            }
+
+            return ruta;
+        }
+
+        /*public int GetIndexIdioma()
+        {
+            int index = 0;
+
+            if (Idioma == "English")
+            {
+                index = 0;
+            }
+            
+
+            return index;
+        }*/
+
+        /*public int GetIndexTipo()
+        {
+            int index = 0;
+
+            if (Tipo == "Ciencia")
+            {
+                index = 0;
+            }
+            else if(Tipo == "Literatura")
+            {
+                index = 1;
+            }else if(Tipo == "Deporte")
+            {
+                index = 2;
+            }
+
+            return index;
+        }*/
     }
 }

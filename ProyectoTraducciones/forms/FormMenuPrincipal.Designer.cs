@@ -227,6 +227,7 @@
             this.MinimumSize = new System.Drawing.Size(1100, 750);
             this.Name = "MenuPrincipal";
             this.Text = "Gestor de traducciones";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GuardarDatos);
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.panelBanner.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgBanner)).EndInit();
