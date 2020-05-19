@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,9 +14,12 @@ namespace ProyectoTraducciones
 {
     public partial class MenuPrincipal : Form
     {
+        ListaTraducciones lista;
+
         public MenuPrincipal()
         {
             InitializeComponent();
+            lista = new ListaTraducciones();
         }
 
         private Form formularioActivo = null;
@@ -36,19 +40,18 @@ namespace ProyectoTraducciones
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            ListaTraducciones lista = new ListaTraducciones();
-            //Las traducciones se cargan pero cuando se quieren utilizar no aparecer en el dictionary
+            //Se cargan las traducciones de los ficheros
             lista.CargarTraducciones();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FormCrear());
+            AbrirFormularioHijo(new FormCrear(lista));
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FormEliminar());
+            AbrirFormularioHijo(new FormEliminar(lista));
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -58,7 +61,7 @@ namespace ProyectoTraducciones
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FormBuscar());
+            AbrirFormularioHijo(new FormBuscar(lista));
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
@@ -69,11 +72,18 @@ namespace ProyectoTraducciones
         private void GuardarDatos(object sender, FormClosingEventArgs e)
         {
             DialogResult ventana = MessageBox.Show("¿Está seguro de que quiere cerrar el programa?", "Cerrar",
-                MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-            if (ventana == DialogResult.Cancel)
+            if (ventana == DialogResult.OK)
             {
-                e.Cancel = true;
+                lista.GuardarTraducciones();
+            }
+            else
+            {
+                if (ventana == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                }
             }
         }
     }

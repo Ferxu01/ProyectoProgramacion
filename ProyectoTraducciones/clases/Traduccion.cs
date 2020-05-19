@@ -61,57 +61,6 @@ namespace ProyectoTraducciones.clases
             set { tipo = value; }
         }
 
-        public string SetRutaFicheroIdioma(string tipo)
-        {
-            /*switch (idioma)
-            {
-                case "English":
-                    rutaActual += "/English";
-                    break;
-                default:
-                    break;
-            }*/
-
-            switch (tipo)
-            {
-                case "Ciencia":
-                    rutaActual += "/Ciencia/ciencia.txt";
-                    break;
-                case "Literatura":
-                    rutaActual += "/Literatura/literatura.txt";
-                    break;
-                case "Deporte":
-                    rutaActual += "/Deporte/deporte.txt";
-                    break;
-                default:
-                    break;
-            }
-
-            return rutaActual;
-        }
-
-        public string SetRutaFicheroEspanyol(string tipo)
-        {
-            string ruta = "./../../files";
-
-            switch (tipo)
-            {
-                case "Ciencia":
-                    ruta += "/Spanish/Ciencia/ciencia.txt";
-                    break;
-                case "Literatura":
-                    ruta += "/Spanish/Literatura/literatura.txt";
-                    break;
-                case "Deporte":
-                    ruta += "/Spanish/Deporte/deporte.txt";
-                    break;
-                default:
-                    break;
-            }
-
-            return ruta;
-        }
-
         /*public int GetIndexIdioma()
         {
             int index = 0;

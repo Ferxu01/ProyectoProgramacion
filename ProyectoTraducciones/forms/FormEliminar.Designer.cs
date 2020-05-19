@@ -79,7 +79,8 @@
             this.tradOriginal,
             this.tradTraducida});
             this.listaEliminarTraduccion.HideSelection = false;
-            this.listaEliminarTraduccion.Location = new System.Drawing.Point(18, 162);
+            this.listaEliminarTraduccion.Location = new System.Drawing.Point(6, 162);
+            this.listaEliminarTraduccion.MultiSelect = false;
             this.listaEliminarTraduccion.Name = "listaEliminarTraduccion";
             this.listaEliminarTraduccion.Size = new System.Drawing.Size(537, 240);
             this.listaEliminarTraduccion.TabIndex = 7;
@@ -187,8 +188,8 @@
         private System.Windows.Forms.Button btnEliminarTraduccion;
         private System.Windows.Forms.Label tituloFormularioEliminar;
         private System.Windows.Forms.ListView listaEliminarTraduccion;
-        private System.Windows.Forms.ColumnHeader id;
         private System.Windows.Forms.ColumnHeader tradOriginal;
         private System.Windows.Forms.ColumnHeader tradTraducida;
+        public System.Windows.Forms.ColumnHeader id;
     }
 }

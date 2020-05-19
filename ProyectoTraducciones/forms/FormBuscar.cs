@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoTraducciones.clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace ProyectoTraducciones
 {
     public partial class FormBuscar : Form
     {
-        public FormBuscar()
+        ListaTraducciones lista;
+        public FormBuscar(ListaTraducciones lista)
         {
             InitializeComponent();
+            this.lista = lista;
         }
 
         private void btnCerrarFormulario_Click(object sender, EventArgs e)

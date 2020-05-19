@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,19 +16,15 @@ namespace ProyectoTraducciones
     {
         ListaTraducciones lista;
 
-        public FormEliminar()
+        public FormEliminar(ListaTraducciones lista)
         {
             InitializeComponent();
-            lista = new ListaTraducciones();
+            this.lista = lista;
 
             CargarDesplegableIdiomas(lista);
             CargarDesplegableTipos(lista);
 
-            //MostrarTraducciones(lista);
-            
-            //Funciona pero no actualiza las creaciones que se hagan porque solo cogen las que se guardaron en los ficheros
-            //lista.CargarTraducciones();
-
+            //Carga las traducciones que se encuentran en el dictionary
             lista.MostrarTraducciones(listaEliminarTraduccion);
         }
 
@@ -36,25 +33,12 @@ namespace ProyectoTraducciones
             this.Close();
         }
 
-        /*private void MostrarTraducciones(ListaTraducciones lista)
-        {
-            foreach (KeyValuePair<int,Traduccion> list in lista.ListaTrads)
-            {
-                ListViewItem columna = new ListViewItem(list.Key.ToString());
-                columna.SubItems.Add(list.Value.NomOriginal);
-                columna.SubItems.Add(list.Value.NomTraducida);
-                listaEliminarTraduccion.Items.Add(columna);
-            }
-        }*/
-
         private void CargarDesplegableIdiomas(ListaTraducciones lista)
         {
             foreach (string linea in lista.CargarListaIdiomas())
             {
                 dropDownIdiomaEliminar.Items.Add(linea);
             }
-
-            dropDownIdiomaEliminar.SelectedIndex = 0;
         }
 
         private void CargarDesplegableTipos(ListaTraducciones lista)
@@ -63,13 +47,18 @@ namespace ProyectoTraducciones
             {
                 dropDownTipoEliminar.Items.Add(linea);
             }
-
-            dropDownTipoEliminar.SelectedIndex = 0;
         }
 
         private void btnEliminarTraduccion_Click(object sender, EventArgs e)
         {
-            
+            //Obtener el campo código del elemento seleccionado
+            int codigo = Convert.ToInt32(listaEliminarTraduccion.SelectedItems[0].SubItems[0].Text);
+
+            lista.Borrar(codigo); //Borrar el elemento seleccionado del dictionary
+
+            //Método que actualice el dictionary de lista traducciones
+            listaEliminarTraduccion.Items.Clear();
+            lista.MostrarTraducciones(listaEliminarTraduccion);
         }
     }
 }

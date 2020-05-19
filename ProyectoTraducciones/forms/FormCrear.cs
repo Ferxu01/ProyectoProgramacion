@@ -16,17 +16,18 @@ namespace ProyectoTraducciones
         ListaTraducciones lista;
         int codigo = 0;
 
-        public FormCrear()
+        public FormCrear(ListaTraducciones lista)
         {
             InitializeComponent();
-            lista = new ListaTraducciones();
+            this.lista = lista;
 
-            CargarDesplegableIdiomas(lista);
-            CargarDesplegableTipos(lista);
+            CargarDesplegableIdiomas();
+            CargarDesplegableTipos();
         }
 
-        private void CargarDesplegableIdiomas(ListaTraducciones lista)
+        private void CargarDesplegableIdiomas()
         {
+            ListaTraducciones lista = new ListaTraducciones();
             foreach (string linea in lista.CargarListaIdiomas())
             {
                 dropDownIdiomaCrear.Items.Add(linea);
@@ -35,8 +36,9 @@ namespace ProyectoTraducciones
             dropDownIdiomaCrear.SelectedIndex = 0;
         }
 
-        private void CargarDesplegableTipos(ListaTraducciones lista)
+        private void CargarDesplegableTipos()
         {
+            ListaTraducciones lista = new ListaTraducciones();
             foreach (string linea in lista.CargarListaTipos())
             {
                 dropDownTipoCrear.Items.Add(linea);

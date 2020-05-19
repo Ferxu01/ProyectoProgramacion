@@ -19,9 +19,6 @@ namespace ProyectoTraducciones.clases
         {
             listaTraducciones = new Dictionary<int,Traduccion>();
 
-            //Esta opción hace que de error por repetirse los códigos del dictionary cuando se cargaron anteriormente
-            //listaTraducciones = CargarTraducciones();
-
             //Listas sólo para cargar los desplegables
             listaTipos = new ArrayList();
             listaIdiomas = new ArrayList();
@@ -155,19 +152,30 @@ namespace ProyectoTraducciones.clases
             return traduccion;
         }
 
-        public void GuardarTraducciones(string tipo, Traduccion traduccion)
+        public void GuardarTraducciones(/*Traduccion traduccion*/)
         {
-            string rutaEspanyol = traduccion.SetRutaFicheroEspanyol(tipo);
-            string rutaIdioma = traduccion.SetRutaFicheroIdioma(tipo);
+            string[] idiomas = { "English" };
+            string[] tipos = { "Ciencia", "Literatura", "Deporte" };
+            string rutaFicheros = "./../../files";
+
+            //string rutaEspanyol = traduccion.SetRutaFicheroEspanyol(tipo);
+            //string rutaIdioma = traduccion.SetRutaFicheroIdioma(tipo);
             StreamWriter ficheroEspanyol;
             StreamWriter ficheroIdioma;
 
             try
             {
-                foreach (KeyValuePair<int, Traduccion> lista in listaTraducciones)
+                foreach (KeyValuePair<int,Traduccion> lista in listaTraducciones)
                 {
-                    ficheroEspanyol = File.CreateText(@rutaEspanyol); //Podría ponerse AppendText
-                    ficheroIdioma = File.CreateText(@rutaIdioma);
+                    if (lista.Value.Idioma == "")
+                    {
+
+                    }
+
+                    //Puede ponerse opcionalmente AppendText
+                    ficheroEspanyol = File.AppendText(rutaFicheros+"/Spanish"+"/"+lista.Value.Tipo+"/"+lista.Value.Tipo.ToLower()+".txt");
+                    
+                    ficheroIdioma = File.AppendText(SeleccionarRutaGuardar(rutaFicheros,lista.Value.Idioma,lista.Value.Tipo));
 
                     ficheroEspanyol.WriteLine(lista.Value.NomOriginal);
                     ficheroIdioma.WriteLine(lista.Value.NomTraducida);
@@ -176,27 +184,52 @@ namespace ProyectoTraducciones.clases
                     ficheroIdioma.Close();
                 }
             }
-            catch (IOException)
+            catch (IOException e)
             {
+                DialogResult dialog = MessageBox.Show("Error: "+e.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+            string SeleccionarRutaGuardar(string rutaGeneral, string idioma, string tipo)
+            {
+                string rutaActual = rutaGeneral;
+
+                switch (idioma)
+                {
+                    case "English":
+                        rutaActual += "/English";
+                        break;
+                    default:
+                        break;
+                }
+
+                switch (tipo)
+                {
+                    case "Ciencia":
+                        rutaActual += "/Ciencia/ciencia.txt";
+                        break;
+                    case "Literatura":
+                        rutaActual += "/Literatura/literatura.txt";
+                        break;
+                    case "Deporte":
+                        rutaActual += "/Deporte/deporte.txt";
+                        break;
+                    default:
+                        break;
+                }
+
+                return rutaActual;
             }
         }
 
-        public StreamWriter SeleccionarFicheroGuardar(string tipo, string idioma)
-        {
-            StreamWriter ficheroGuardar = File.CreateText(@"./../../files/"+idioma+"/"+tipo.ToLower()+".txt");
-
-            return ficheroGuardar;
-        } //Dudando si utilizarlo
-
-        public Dictionary<int,Traduccion> CargarTraducciones(/*string rutaFicheroEspanyol, string rutaFicheroIdioma*/)
+        public Dictionary<int,Traduccion> CargarTraducciones()
         {
             string[] idiomas = { "English" };
             string[] tipos = { "Ciencia", "Literatura", "Deporte" };
             string rutaFicheros = "./../../files";
             Traduccion trad;
             int codigo = 0;
-            string lineaEspanyol = "";
-            string lineaIdioma = "";
+            string lineaEspanyol;
+            string lineaIdioma;
             
 
             int GetIndexTipo(string tipo)
