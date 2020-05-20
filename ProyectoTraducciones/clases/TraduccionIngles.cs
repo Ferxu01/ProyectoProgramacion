@@ -14,7 +14,6 @@ namespace ProyectoTraducciones.clases
             :base(codigo, original, traducida, idioma, tipo)
         {
             rutaActual+="/English";
-            //SetRutaTipoFichero(tipo);
         }
     }
 }

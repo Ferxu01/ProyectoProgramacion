@@ -137,12 +137,15 @@
             // 
             // dropDownIdiomaEliminar
             // 
+            this.dropDownIdiomaEliminar.DisplayMember = "Hola";
             this.dropDownIdiomaEliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownIdiomaEliminar.FormattingEnabled = true;
             this.dropDownIdiomaEliminar.Location = new System.Drawing.Point(68, 119);
             this.dropDownIdiomaEliminar.Name = "dropDownIdiomaEliminar";
             this.dropDownIdiomaEliminar.Size = new System.Drawing.Size(174, 21);
             this.dropDownIdiomaEliminar.TabIndex = 0;
+            this.dropDownIdiomaEliminar.ValueMember = "Hola";
+            this.dropDownIdiomaEliminar.SelectedIndexChanged += new System.EventHandler(this.Filtrar);
             // 
             // labelDropDownTipoEliminar
             // 
@@ -161,6 +164,7 @@
             this.dropDownTipoEliminar.Name = "dropDownTipoEliminar";
             this.dropDownTipoEliminar.Size = new System.Drawing.Size(177, 21);
             this.dropDownTipoEliminar.TabIndex = 1;
+            this.dropDownTipoEliminar.SelectedIndexChanged += new System.EventHandler(this.Filtrar);
             // 
             // FormEliminar
             // 

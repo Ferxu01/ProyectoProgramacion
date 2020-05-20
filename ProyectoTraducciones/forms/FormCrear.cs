@@ -62,13 +62,12 @@ namespace ProyectoTraducciones
 
         private void btnAddTraduccion_Click(object sender, EventArgs e)
         {
-            
-
             string original = palabraOriginal.Text;
             string traducida = palabraTraducida.Text;
             int indexIdioma = dropDownIdiomaCrear.SelectedIndex;
             int indexTipo = dropDownTipoCrear.SelectedIndex;
 
+            //Crear método que obtenga el último código para asignárselo a la próxima traducción a crear
             codigo += 1;
 
             DialogResult dialogo;

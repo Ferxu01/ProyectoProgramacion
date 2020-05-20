@@ -60,37 +60,5 @@ namespace ProyectoTraducciones.clases
             get { return tipo; }
             set { tipo = value; }
         }
-
-        /*public int GetIndexIdioma()
-        {
-            int index = 0;
-
-            if (Idioma == "English")
-            {
-                index = 0;
-            }
-            
-
-            return index;
-        }*/
-
-        /*public int GetIndexTipo()
-        {
-            int index = 0;
-
-            if (Tipo == "Ciencia")
-            {
-                index = 0;
-            }
-            else if(Tipo == "Literatura")
-            {
-                index = 1;
-            }else if(Tipo == "Deporte")
-            {
-                index = 2;
-            }
-
-            return index;
-        }*/
     }
 }

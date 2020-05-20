@@ -54,7 +54,7 @@ namespace ProyectoTraducciones.clases
 
         }
 
-        public void Buscar(int codigo)
+        public void Buscar(int codigo) //Método opcional para utilizar, pude hacerlo de otra forma
         {
 
         }
@@ -167,10 +167,10 @@ namespace ProyectoTraducciones.clases
             {
                 foreach (KeyValuePair<int,Traduccion> lista in listaTraducciones)
                 {
-                    if (lista.Value.Idioma == "")
+                    /*if (lista.Value.Idioma == "")
                     {
 
-                    }
+                    }*/
 
                     //Puede ponerse opcionalmente AppendText
                     ficheroEspanyol = File.AppendText(rutaFicheros+"/Spanish"+"/"+lista.Value.Tipo+"/"+lista.Value.Tipo.ToLower()+".txt");
@@ -297,6 +297,83 @@ namespace ProyectoTraducciones.clases
 
             //Hacer que el siguiente método empiece a crear objetos a partir del último código
             //return codigo;
+        }
+
+        public string GetNomIdioma(int index)
+        {
+            string idioma = "";
+            switch (index)
+            {
+                case 0:
+                    idioma = "English";
+                    break;
+                default:
+                    break;
+            }
+            return idioma;
+        }
+
+        public string GetNomTipo(int index)
+        {
+            string tipo = "";
+            switch (index)
+            {
+                case 0:
+                    tipo = "Ciencia";
+                    break;
+                case 1:
+                    tipo = "Literatura";
+                    break;
+                case 2:
+                    tipo = "Deporte";
+                    break;
+                default:
+                    break;
+            }
+            return tipo;
+        }
+
+        public void FiltrarPorIdiomaTipo(ComboBox dropDownIdioma,ComboBox dropDownTipo,ListView lista)
+        {
+            int indexIdioma = dropDownIdioma.SelectedIndex;
+            string idioma = GetNomIdioma(indexIdioma);
+            int indexTipo = dropDownTipo.SelectedIndex;
+            string tipo = GetNomTipo(indexTipo);
+
+            if (lista != null)
+            {
+                if (indexIdioma != -1 || indexTipo != -1)
+                {
+                    lista.Items.Clear();
+                    foreach (KeyValuePair<int, Traduccion> list in listaTraducciones)
+                    {
+                        if (idioma == list.Value.Idioma && tipo == list.Value.Tipo)
+                        {
+                            ListViewItem columna = new ListViewItem(list.Key.ToString());
+                            columna.SubItems.Add(list.Value.NomOriginal);
+                            columna.SubItems.Add(list.Value.NomTraducida);
+                            lista.Items.Add(columna);
+                        }
+                    }
+                }
+            }
+        }
+
+        public void FiltrarPorNombre(KeyValuePair<int,Traduccion> list, TextBox nombreOriginalTraduccion, ListView listView)
+        {
+            if (list.Value.NomOriginal.ToLower().StartsWith(nombreOriginalTraduccion.Text.ToLower()))
+            {
+                ListViewItem columna = new ListViewItem(list.Key.ToString());
+                columna.SubItems.Add(list.Value.NomOriginal);
+                columna.SubItems.Add(list.Value.NomTraducida);
+                listView.Items.Add(columna);
+            }
+        }
+
+        public void ResetearControlesFormulario(ComboBox dropDownIdioma, ComboBox dropDownTipo)
+        {
+            //dropDownIdioma.SelectedIndex = 0;
+            //dropDownTipo.SelectedIndex = 0;
         }
     }
 }

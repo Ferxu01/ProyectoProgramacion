@@ -30,10 +30,13 @@
         {
             this.btnCerrarFormulario = new System.Windows.Forms.Button();
             this.panelBuscarTraduccion = new System.Windows.Forms.Panel();
+            this.listaMostrarTraduccionBuscada = new System.Windows.Forms.ListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tradOriginal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tradTraducida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tituloTraduccionBuscar = new System.Windows.Forms.Label();
             this.dropDownTipoBuscar = new System.Windows.Forms.ComboBox();
             this.labelDropDownTipoBuscar = new System.Windows.Forms.Label();
-            this.listaMostrarTraduccionBuscada = new System.Windows.Forms.ListBox();
             this.dropDownIdiomaBuscar = new System.Windows.Forms.ComboBox();
             this.labelDropDownIdiomaBuscar = new System.Windows.Forms.Label();
             this.labelNombreOriginalTraduccionBuscar = new System.Windows.Forms.Label();
@@ -59,10 +62,10 @@
             // panelBuscarTraduccion
             // 
             this.panelBuscarTraduccion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelBuscarTraduccion.Controls.Add(this.listaMostrarTraduccionBuscada);
             this.panelBuscarTraduccion.Controls.Add(this.tituloTraduccionBuscar);
             this.panelBuscarTraduccion.Controls.Add(this.dropDownTipoBuscar);
             this.panelBuscarTraduccion.Controls.Add(this.labelDropDownTipoBuscar);
-            this.panelBuscarTraduccion.Controls.Add(this.listaMostrarTraduccionBuscada);
             this.panelBuscarTraduccion.Controls.Add(this.dropDownIdiomaBuscar);
             this.panelBuscarTraduccion.Controls.Add(this.labelDropDownIdiomaBuscar);
             this.panelBuscarTraduccion.Controls.Add(this.labelNombreOriginalTraduccionBuscar);
@@ -72,6 +75,38 @@
             this.panelBuscarTraduccion.Name = "panelBuscarTraduccion";
             this.panelBuscarTraduccion.Size = new System.Drawing.Size(596, 447);
             this.panelBuscarTraduccion.TabIndex = 2;
+            // 
+            // listaMostrarTraduccionBuscada
+            // 
+            this.listaMostrarTraduccionBuscada.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.id,
+            this.tradOriginal,
+            this.tradTraducida});
+            this.listaMostrarTraduccionBuscada.HideSelection = false;
+            this.listaMostrarTraduccionBuscada.Location = new System.Drawing.Point(29, 236);
+            this.listaMostrarTraduccionBuscada.MultiSelect = false;
+            this.listaMostrarTraduccionBuscada.Name = "listaMostrarTraduccionBuscada";
+            this.listaMostrarTraduccionBuscada.Size = new System.Drawing.Size(472, 149);
+            this.listaMostrarTraduccionBuscada.TabIndex = 11;
+            this.listaMostrarTraduccionBuscada.UseCompatibleStateImageBehavior = false;
+            this.listaMostrarTraduccionBuscada.View = System.Windows.Forms.View.Details;
+            // 
+            // id
+            // 
+            this.id.Text = "Id";
+            this.id.Width = 44;
+            // 
+            // tradOriginal
+            // 
+            this.tradOriginal.Text = "Original";
+            this.tradOriginal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tradOriginal.Width = 174;
+            // 
+            // tradTraducida
+            // 
+            this.tradTraducida.Text = "Traducida";
+            this.tradTraducida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tradTraducida.Width = 171;
             // 
             // tituloTraduccionBuscar
             // 
@@ -100,14 +135,6 @@
             this.labelDropDownTipoBuscar.Size = new System.Drawing.Size(28, 13);
             this.labelDropDownTipoBuscar.TabIndex = 7;
             this.labelDropDownTipoBuscar.Text = "Tipo";
-            // 
-            // listaMostrarTraduccionBuscada
-            // 
-            this.listaMostrarTraduccionBuscada.FormattingEnabled = true;
-            this.listaMostrarTraduccionBuscada.Location = new System.Drawing.Point(43, 227);
-            this.listaMostrarTraduccionBuscada.Name = "listaMostrarTraduccionBuscada";
-            this.listaMostrarTraduccionBuscada.Size = new System.Drawing.Size(498, 160);
-            this.listaMostrarTraduccionBuscada.TabIndex = 3;
             // 
             // dropDownIdiomaBuscar
             // 
@@ -138,12 +165,13 @@
             // 
             // btnBuscarTraduccion
             // 
-            this.btnBuscarTraduccion.Location = new System.Drawing.Point(453, 404);
+            this.btnBuscarTraduccion.Location = new System.Drawing.Point(413, 402);
             this.btnBuscarTraduccion.Name = "btnBuscarTraduccion";
             this.btnBuscarTraduccion.Size = new System.Drawing.Size(88, 31);
             this.btnBuscarTraduccion.TabIndex = 5;
             this.btnBuscarTraduccion.Text = "Buscar";
             this.btnBuscarTraduccion.UseVisualStyleBackColor = true;
+            this.btnBuscarTraduccion.Click += new System.EventHandler(this.btnBuscarTraduccion_Click);
             // 
             // nombreOriginalTraduccionBuscar
             // 
@@ -175,10 +203,13 @@
         private System.Windows.Forms.Label labelDropDownIdiomaBuscar;
         private System.Windows.Forms.Label labelNombreOriginalTraduccionBuscar;
         private System.Windows.Forms.Button btnBuscarTraduccion;
-        private System.Windows.Forms.ListBox listaMostrarTraduccionBuscada;
         private System.Windows.Forms.ComboBox dropDownIdiomaBuscar;
         private System.Windows.Forms.ComboBox dropDownTipoBuscar;
         private System.Windows.Forms.Label labelDropDownTipoBuscar;
         private System.Windows.Forms.Label tituloTraduccionBuscar;
+        private System.Windows.Forms.ListView listaMostrarTraduccionBuscada;
+        public System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader tradOriginal;
+        private System.Windows.Forms.ColumnHeader tradTraducida;
     }
 }

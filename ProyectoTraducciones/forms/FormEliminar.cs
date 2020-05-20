@@ -21,8 +21,8 @@ namespace ProyectoTraducciones
             InitializeComponent();
             this.lista = lista;
 
-            CargarDesplegableIdiomas(lista);
-            CargarDesplegableTipos(lista);
+            CargarDesplegableIdiomas();
+            CargarDesplegableTipos();
 
             //Carga las traducciones que se encuentran en el dictionary
             lista.MostrarTraducciones(listaEliminarTraduccion);
@@ -33,16 +33,18 @@ namespace ProyectoTraducciones
             this.Close();
         }
 
-        private void CargarDesplegableIdiomas(ListaTraducciones lista)
+        private void CargarDesplegableIdiomas()
         {
+            ListaTraducciones lista = new ListaTraducciones();
             foreach (string linea in lista.CargarListaIdiomas())
             {
                 dropDownIdiomaEliminar.Items.Add(linea);
             }
         }
 
-        private void CargarDesplegableTipos(ListaTraducciones lista)
+        private void CargarDesplegableTipos()
         {
+            ListaTraducciones lista = new ListaTraducciones();
             foreach (string linea in lista.CargarListaTipos())
             {
                 dropDownTipoEliminar.Items.Add(linea);
@@ -54,11 +56,19 @@ namespace ProyectoTraducciones
             //Obtener el campo código del elemento seleccionado
             int codigo = Convert.ToInt32(listaEliminarTraduccion.SelectedItems[0].SubItems[0].Text);
 
-            lista.Borrar(codigo); //Borrar el elemento seleccionado del dictionary
+            lista.Borrar(codigo);
 
-            //Método que actualice el dictionary de lista traducciones
+            //Actualiza el dictionary de lista traducciones
             listaEliminarTraduccion.Items.Clear();
+
+            //lista.ResetearControlesFormulario(dropDownIdiomaEliminar,dropDownTipoEliminar);
+
             lista.MostrarTraducciones(listaEliminarTraduccion);
+        }
+
+        private void Filtrar(object sender, EventArgs e)
+        {
+            lista.FiltrarPorIdiomaTipo(dropDownIdiomaEliminar,dropDownTipoEliminar,listaEliminarTraduccion);
         }
     }
 }
