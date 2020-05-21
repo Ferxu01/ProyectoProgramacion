@@ -57,6 +57,7 @@
             this.btnCerrarFormulario.TabIndex = 1;
             this.btnCerrarFormulario.Text = "X";
             this.btnCerrarFormulario.UseVisualStyleBackColor = false;
+            this.btnCerrarFormulario.Click += new System.EventHandler(this.btnCerrarFormulario_Click);
             // 
             // panelEditarTraduccion
             // 
@@ -102,6 +103,7 @@
             // 
             this.codigoTraduccionEditar.Location = new System.Drawing.Point(139, 122);
             this.codigoTraduccionEditar.Name = "codigoTraduccionEditar";
+            this.codigoTraduccionEditar.ReadOnly = true;
             this.codigoTraduccionEditar.Size = new System.Drawing.Size(223, 20);
             this.codigoTraduccionEditar.TabIndex = 0;
             // 
@@ -109,12 +111,13 @@
             // 
             this.btnEditarTraduccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditarTraduccion.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarTraduccion.Location = new System.Drawing.Point(347, 424);
+            this.btnEditarTraduccion.Location = new System.Drawing.Point(347, 415);
             this.btnEditarTraduccion.Name = "btnEditarTraduccion";
-            this.btnEditarTraduccion.Size = new System.Drawing.Size(106, 24);
+            this.btnEditarTraduccion.Size = new System.Drawing.Size(106, 33);
             this.btnEditarTraduccion.TabIndex = 5;
             this.btnEditarTraduccion.Text = "Editar";
             this.btnEditarTraduccion.UseVisualStyleBackColor = true;
+            this.btnEditarTraduccion.Click += new System.EventHandler(this.btnEditarTraduccion_Click);
             // 
             // labelDropDownIdiomaEditar
             // 

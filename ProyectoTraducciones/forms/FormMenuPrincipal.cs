@@ -23,7 +23,7 @@ namespace ProyectoTraducciones
         }
 
         private Form formularioActivo = null;
-        private void AbrirFormularioHijo(Form formularioHijo)
+        public void AbrirFormularioHijo(Form formularioHijo)
         {
             if (formularioActivo != null)
                 formularioActivo.Close();
@@ -56,7 +56,7 @@ namespace ProyectoTraducciones
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new FormEditar());
+            AbrirFormularioHijo(new FormEditar(lista));
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

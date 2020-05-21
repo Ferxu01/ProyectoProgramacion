@@ -19,7 +19,7 @@ namespace ProyectoTraducciones.clases
         {
             listaTraducciones = new Dictionary<int,Traduccion>();
 
-            //Listas sólo para cargar los desplegables
+            //Listas para cargar los desplegables
             listaTipos = new ArrayList();
             listaIdiomas = new ArrayList();
         }
@@ -44,19 +44,42 @@ namespace ProyectoTraducciones.clases
             //GuardarTraducciones(traduccion.Tipo,traduccion);
         }
 
-        public void Borrar(int codigo)
+        public bool Borrar(int codigo)
         {
-            listaTraducciones.Remove(codigo);
+            return listaTraducciones.Remove(codigo);
         }
 
-        public void Editar(Traduccion traduccion)
+        public bool Editar(Traduccion traduccion, string original, string traducida, int indexIdioma, int indexTipo,
+            TextBox originalEditar, TextBox traducidaEditar)
         {
+            if (original != traduccion.NomOriginal
+                || traducida != traduccion.NomTraducida
+                || GetNomIdioma(indexIdioma) != traduccion.Idioma
+                || GetNomTipo(indexTipo) != traduccion.Tipo)
+            {
+                traduccion.NomOriginal = originalEditar.Text;
+                traduccion.NomTraducida = traducidaEditar.Text;
+                traduccion.Idioma = GetNomIdioma(indexIdioma);
+                traduccion.Tipo = GetNomTipo(indexTipo);
 
+                return true;
+            }
+
+            return false;
         }
 
-        public void Buscar(int codigo) //Método opcional para utilizar, pude hacerlo de otra forma
+        //Busca la traducción a EDITAR en el dictionary
+        public Traduccion Buscar(int codigo)
         {
+            foreach (KeyValuePair<int,Traduccion> lista in listaTraducciones)
+            {
+                if (lista.Key == codigo)
+                {
+                    return lista.Value;
+                }
+            }
 
+            return null;
         }
 
         public Dictionary<int,Traduccion> ListaTrads
@@ -333,6 +356,36 @@ namespace ProyectoTraducciones.clases
             return tipo;
         }
 
+        public int GetIndexIdioma(string idioma)
+        {
+            switch (idioma)
+            {
+                case "English":
+                    return 0;
+                default:
+                    break;
+            }
+
+            return -1;
+        }
+
+        public int GetIndexTipo(string tipo)
+        {
+            switch (tipo)
+            {
+                case "Ciencia":
+                    return 0;
+                case "Literatura":
+                    return 1;
+                case "Deporte":
+                    return 2;
+                default:
+                    break;
+            }
+
+            return -1;
+        }
+
         public void FiltrarPorIdiomaTipo(ComboBox dropDownIdioma,ComboBox dropDownTipo,ListView lista)
         {
             int indexIdioma = dropDownIdioma.SelectedIndex;
@@ -368,6 +421,11 @@ namespace ProyectoTraducciones.clases
                 columna.SubItems.Add(list.Value.NomTraducida);
                 listView.Items.Add(columna);
             }
+        }
+
+        public int GetCodigoInicial(int ultCodigo)
+        {
+            return ultCodigo;
         }
 
         public void ResetearControlesFormulario(ComboBox dropDownIdioma, ComboBox dropDownTipo)

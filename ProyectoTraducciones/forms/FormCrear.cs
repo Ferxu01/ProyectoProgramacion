@@ -14,7 +14,7 @@ namespace ProyectoTraducciones
     public partial class FormCrear : Form
     {
         ListaTraducciones lista;
-        int codigo = 0;
+        int codigo;
 
         public FormCrear(ListaTraducciones lista)
         {
@@ -23,6 +23,9 @@ namespace ProyectoTraducciones
 
             CargarDesplegableIdiomas();
             CargarDesplegableTipos();
+
+            //Obtener el código del último elemento guardado en el dictionary
+            codigo = lista.GetCodigoInicial(lista.ListaTrads.Count);
         }
 
         private void CargarDesplegableIdiomas()

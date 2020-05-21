@@ -30,6 +30,10 @@
         {
             this.btnCerrarFormulario = new System.Windows.Forms.Button();
             this.panelSeleccionarTraduccionEditar = new System.Windows.Forms.Panel();
+            this.listaSeleccionarTraduccionEditar = new System.Windows.Forms.ListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tradOriginal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tradTraducida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelTraduccionFiltrarEditar = new System.Windows.Forms.Label();
             this.labelTipoSeleccionarEditar = new System.Windows.Forms.Label();
             this.labelIdiomaSeleccionarEditar = new System.Windows.Forms.Label();
@@ -37,7 +41,6 @@
             this.dropDownIdiomaSeleccionarEditar = new System.Windows.Forms.ComboBox();
             this.dropDownTipoSeleccionarEditar = new System.Windows.Forms.ComboBox();
             this.btnSeleccionarTraduccionEditar = new System.Windows.Forms.Button();
-            this.listaSeleccionarTraduccionEditar = new System.Windows.Forms.ListBox();
             this.tituloSeleccionarTraduccionEditar = new System.Windows.Forms.Label();
             this.panelSeleccionarTraduccionEditar.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +62,7 @@
             // panelSeleccionarTraduccionEditar
             // 
             this.panelSeleccionarTraduccionEditar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelSeleccionarTraduccionEditar.Controls.Add(this.listaSeleccionarTraduccionEditar);
             this.panelSeleccionarTraduccionEditar.Controls.Add(this.labelTraduccionFiltrarEditar);
             this.panelSeleccionarTraduccionEditar.Controls.Add(this.labelTipoSeleccionarEditar);
             this.panelSeleccionarTraduccionEditar.Controls.Add(this.labelIdiomaSeleccionarEditar);
@@ -66,12 +70,43 @@
             this.panelSeleccionarTraduccionEditar.Controls.Add(this.dropDownIdiomaSeleccionarEditar);
             this.panelSeleccionarTraduccionEditar.Controls.Add(this.dropDownTipoSeleccionarEditar);
             this.panelSeleccionarTraduccionEditar.Controls.Add(this.btnSeleccionarTraduccionEditar);
-            this.panelSeleccionarTraduccionEditar.Controls.Add(this.listaSeleccionarTraduccionEditar);
             this.panelSeleccionarTraduccionEditar.Controls.Add(this.tituloSeleccionarTraduccionEditar);
             this.panelSeleccionarTraduccionEditar.Location = new System.Drawing.Point(60, 23);
             this.panelSeleccionarTraduccionEditar.Name = "panelSeleccionarTraduccionEditar";
             this.panelSeleccionarTraduccionEditar.Size = new System.Drawing.Size(583, 436);
             this.panelSeleccionarTraduccionEditar.TabIndex = 2;
+            // 
+            // listaSeleccionarTraduccionEditar
+            // 
+            this.listaSeleccionarTraduccionEditar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.id,
+            this.tradOriginal,
+            this.tradTraducida});
+            this.listaSeleccionarTraduccionEditar.HideSelection = false;
+            this.listaSeleccionarTraduccionEditar.Location = new System.Drawing.Point(34, 163);
+            this.listaSeleccionarTraduccionEditar.MultiSelect = false;
+            this.listaSeleccionarTraduccionEditar.Name = "listaSeleccionarTraduccionEditar";
+            this.listaSeleccionarTraduccionEditar.Size = new System.Drawing.Size(507, 212);
+            this.listaSeleccionarTraduccionEditar.TabIndex = 12;
+            this.listaSeleccionarTraduccionEditar.UseCompatibleStateImageBehavior = false;
+            this.listaSeleccionarTraduccionEditar.View = System.Windows.Forms.View.Details;
+            // 
+            // id
+            // 
+            this.id.Text = "Id";
+            this.id.Width = 44;
+            // 
+            // tradOriginal
+            // 
+            this.tradOriginal.Text = "Original";
+            this.tradOriginal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tradOriginal.Width = 174;
+            // 
+            // tradTraducida
+            // 
+            this.tradTraducida.Text = "Traducida";
+            this.tradTraducida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tradTraducida.Width = 171;
             // 
             // labelTraduccionFiltrarEditar
             // 
@@ -106,6 +141,7 @@
             this.nombreTraduccionFiltrar.Name = "nombreTraduccionFiltrar";
             this.nombreTraduccionFiltrar.Size = new System.Drawing.Size(155, 20);
             this.nombreTraduccionFiltrar.TabIndex = 2;
+            this.nombreTraduccionFiltrar.TextChanged += new System.EventHandler(this.FiltrarTexto);
             // 
             // dropDownIdiomaSeleccionarEditar
             // 
@@ -115,6 +151,7 @@
             this.dropDownIdiomaSeleccionarEditar.Name = "dropDownIdiomaSeleccionarEditar";
             this.dropDownIdiomaSeleccionarEditar.Size = new System.Drawing.Size(152, 21);
             this.dropDownIdiomaSeleccionarEditar.TabIndex = 0;
+            this.dropDownIdiomaSeleccionarEditar.SelectedIndexChanged += new System.EventHandler(this.Filtrar);
             // 
             // dropDownTipoSeleccionarEditar
             // 
@@ -124,6 +161,7 @@
             this.dropDownTipoSeleccionarEditar.Name = "dropDownTipoSeleccionarEditar";
             this.dropDownTipoSeleccionarEditar.Size = new System.Drawing.Size(147, 21);
             this.dropDownTipoSeleccionarEditar.TabIndex = 1;
+            this.dropDownTipoSeleccionarEditar.SelectedIndexChanged += new System.EventHandler(this.Filtrar);
             // 
             // btnSeleccionarTraduccionEditar
             // 
@@ -133,14 +171,7 @@
             this.btnSeleccionarTraduccionEditar.TabIndex = 4;
             this.btnSeleccionarTraduccionEditar.Text = "Seleccionar";
             this.btnSeleccionarTraduccionEditar.UseVisualStyleBackColor = true;
-            // 
-            // listaSeleccionarTraduccionEditar
-            // 
-            this.listaSeleccionarTraduccionEditar.FormattingEnabled = true;
-            this.listaSeleccionarTraduccionEditar.Location = new System.Drawing.Point(34, 163);
-            this.listaSeleccionarTraduccionEditar.Name = "listaSeleccionarTraduccionEditar";
-            this.listaSeleccionarTraduccionEditar.Size = new System.Drawing.Size(507, 212);
-            this.listaSeleccionarTraduccionEditar.TabIndex = 3;
+            this.btnSeleccionarTraduccionEditar.Click += new System.EventHandler(this.btnSeleccionarTraduccionEditar_Click);
             // 
             // tituloSeleccionarTraduccionEditar
             // 
@@ -173,12 +204,15 @@
         private System.Windows.Forms.Panel panelSeleccionarTraduccionEditar;
         private System.Windows.Forms.Label tituloSeleccionarTraduccionEditar;
         private System.Windows.Forms.Button btnSeleccionarTraduccionEditar;
-        private System.Windows.Forms.ListBox listaSeleccionarTraduccionEditar;
         private System.Windows.Forms.TextBox nombreTraduccionFiltrar;
         private System.Windows.Forms.ComboBox dropDownIdiomaSeleccionarEditar;
         private System.Windows.Forms.ComboBox dropDownTipoSeleccionarEditar;
         private System.Windows.Forms.Label labelTraduccionFiltrarEditar;
         private System.Windows.Forms.Label labelTipoSeleccionarEditar;
         private System.Windows.Forms.Label labelIdiomaSeleccionarEditar;
+        private System.Windows.Forms.ListView listaSeleccionarTraduccionEditar;
+        public System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader tradOriginal;
+        private System.Windows.Forms.ColumnHeader tradTraducida;
     }
 }

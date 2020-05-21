@@ -58,7 +58,7 @@ namespace ProyectoTraducciones
 
             lista.Borrar(codigo);
 
-            //Actualiza el dictionary de lista traducciones
+            //Actualiza la listView con los nuevos
             listaEliminarTraduccion.Items.Clear();
 
             //lista.ResetearControlesFormulario(dropDownIdiomaEliminar,dropDownTipoEliminar);
