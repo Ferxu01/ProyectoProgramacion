@@ -118,7 +118,7 @@
             // 
             this.btnEliminarTraduccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarTraduccion.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarTraduccion.Location = new System.Drawing.Point(462, 419);
+            this.btnEliminarTraduccion.Location = new System.Drawing.Point(450, 419);
             this.btnEliminarTraduccion.Name = "btnEliminarTraduccion";
             this.btnEliminarTraduccion.Size = new System.Drawing.Size(93, 28);
             this.btnEliminarTraduccion.TabIndex = 3;

@@ -8,8 +8,6 @@ namespace ProyectoTraducciones.clases
 {
     public class TraduccionIngles : Traduccion
     {
-        //Pensar un atributo que poner
-
         public TraduccionIngles(int codigo, string original, string traducida, string idioma, string tipo) 
             :base(codigo, original, traducida, idioma, tipo)
         {

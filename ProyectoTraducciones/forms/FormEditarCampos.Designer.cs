@@ -74,9 +74,9 @@
             this.panelEditarTraduccion.Controls.Add(this.palabraTraducidaEditar);
             this.panelEditarTraduccion.Controls.Add(this.labelPalabraOriginalEditar);
             this.panelEditarTraduccion.Controls.Add(this.palabraOriginalEditar);
-            this.panelEditarTraduccion.Location = new System.Drawing.Point(74, 12);
+            this.panelEditarTraduccion.Location = new System.Drawing.Point(90, 12);
             this.panelEditarTraduccion.Name = "panelEditarTraduccion";
-            this.panelEditarTraduccion.Size = new System.Drawing.Size(553, 466);
+            this.panelEditarTraduccion.Size = new System.Drawing.Size(579, 486);
             this.panelEditarTraduccion.TabIndex = 2;
             // 
             // tituloEditarTraduccion
@@ -92,7 +92,7 @@
             // labelCodigoTraduccionEditar
             // 
             this.labelCodigoTraduccionEditar.AutoSize = true;
-            this.labelCodigoTraduccionEditar.Location = new System.Drawing.Point(136, 101);
+            this.labelCodigoTraduccionEditar.Location = new System.Drawing.Point(147, 101);
             this.labelCodigoTraduccionEditar.Name = "labelCodigoTraduccionEditar";
             this.labelCodigoTraduccionEditar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelCodigoTraduccionEditar.Size = new System.Drawing.Size(40, 13);
@@ -101,7 +101,7 @@
             // 
             // codigoTraduccionEditar
             // 
-            this.codigoTraduccionEditar.Location = new System.Drawing.Point(139, 122);
+            this.codigoTraduccionEditar.Location = new System.Drawing.Point(150, 122);
             this.codigoTraduccionEditar.Name = "codigoTraduccionEditar";
             this.codigoTraduccionEditar.ReadOnly = true;
             this.codigoTraduccionEditar.Size = new System.Drawing.Size(223, 20);
@@ -111,7 +111,7 @@
             // 
             this.btnEditarTraduccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditarTraduccion.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarTraduccion.Location = new System.Drawing.Point(347, 415);
+            this.btnEditarTraduccion.Location = new System.Drawing.Point(383, 414);
             this.btnEditarTraduccion.Name = "btnEditarTraduccion";
             this.btnEditarTraduccion.Size = new System.Drawing.Size(106, 33);
             this.btnEditarTraduccion.TabIndex = 5;
@@ -122,7 +122,7 @@
             // labelDropDownIdiomaEditar
             // 
             this.labelDropDownIdiomaEditar.AutoSize = true;
-            this.labelDropDownIdiomaEditar.Location = new System.Drawing.Point(136, 269);
+            this.labelDropDownIdiomaEditar.Location = new System.Drawing.Point(147, 269);
             this.labelDropDownIdiomaEditar.Name = "labelDropDownIdiomaEditar";
             this.labelDropDownIdiomaEditar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelDropDownIdiomaEditar.Size = new System.Drawing.Size(38, 13);
@@ -133,7 +133,7 @@
             // 
             this.dropDownIdiomaEditar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownIdiomaEditar.FormattingEnabled = true;
-            this.dropDownIdiomaEditar.Location = new System.Drawing.Point(139, 289);
+            this.dropDownIdiomaEditar.Location = new System.Drawing.Point(150, 289);
             this.dropDownIdiomaEditar.Name = "dropDownIdiomaEditar";
             this.dropDownIdiomaEditar.Size = new System.Drawing.Size(200, 21);
             this.dropDownIdiomaEditar.TabIndex = 3;
@@ -141,7 +141,7 @@
             // labelDropDownTipoEditar
             // 
             this.labelDropDownTipoEditar.AutoSize = true;
-            this.labelDropDownTipoEditar.Location = new System.Drawing.Point(136, 331);
+            this.labelDropDownTipoEditar.Location = new System.Drawing.Point(147, 331);
             this.labelDropDownTipoEditar.Name = "labelDropDownTipoEditar";
             this.labelDropDownTipoEditar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelDropDownTipoEditar.Size = new System.Drawing.Size(28, 13);
@@ -152,7 +152,7 @@
             // 
             this.dropDownTipoEditar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropDownTipoEditar.FormattingEnabled = true;
-            this.dropDownTipoEditar.Location = new System.Drawing.Point(139, 351);
+            this.dropDownTipoEditar.Location = new System.Drawing.Point(150, 351);
             this.dropDownTipoEditar.Name = "dropDownTipoEditar";
             this.dropDownTipoEditar.Size = new System.Drawing.Size(200, 21);
             this.dropDownTipoEditar.TabIndex = 4;
@@ -160,7 +160,7 @@
             // labelPalabraTraducidaEditar
             // 
             this.labelPalabraTraducidaEditar.AutoSize = true;
-            this.labelPalabraTraducidaEditar.Location = new System.Drawing.Point(136, 212);
+            this.labelPalabraTraducidaEditar.Location = new System.Drawing.Point(147, 212);
             this.labelPalabraTraducidaEditar.Name = "labelPalabraTraducidaEditar";
             this.labelPalabraTraducidaEditar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelPalabraTraducidaEditar.Size = new System.Drawing.Size(55, 13);
@@ -169,7 +169,7 @@
             // 
             // palabraTraducidaEditar
             // 
-            this.palabraTraducidaEditar.Location = new System.Drawing.Point(139, 232);
+            this.palabraTraducidaEditar.Location = new System.Drawing.Point(150, 232);
             this.palabraTraducidaEditar.Name = "palabraTraducidaEditar";
             this.palabraTraducidaEditar.Size = new System.Drawing.Size(223, 20);
             this.palabraTraducidaEditar.TabIndex = 2;
@@ -177,7 +177,7 @@
             // labelPalabraOriginalEditar
             // 
             this.labelPalabraOriginalEditar.AutoSize = true;
-            this.labelPalabraOriginalEditar.Location = new System.Drawing.Point(136, 154);
+            this.labelPalabraOriginalEditar.Location = new System.Drawing.Point(147, 154);
             this.labelPalabraOriginalEditar.Name = "labelPalabraOriginalEditar";
             this.labelPalabraOriginalEditar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.labelPalabraOriginalEditar.Size = new System.Drawing.Size(42, 13);
@@ -186,7 +186,7 @@
             // 
             // palabraOriginalEditar
             // 
-            this.palabraOriginalEditar.Location = new System.Drawing.Point(139, 175);
+            this.palabraOriginalEditar.Location = new System.Drawing.Point(150, 175);
             this.palabraOriginalEditar.Name = "palabraOriginalEditar";
             this.palabraOriginalEditar.Size = new System.Drawing.Size(223, 20);
             this.palabraOriginalEditar.TabIndex = 1;
@@ -198,6 +198,7 @@
             this.ClientSize = new System.Drawing.Size(730, 510);
             this.Controls.Add(this.panelEditarTraduccion);
             this.Controls.Add(this.btnCerrarFormulario);
+            this.MinimumSize = new System.Drawing.Size(746, 549);
             this.Name = "FormEditarCampos";
             this.Text = "FormEditarCampos";
             this.panelEditarTraduccion.ResumeLayout(false);

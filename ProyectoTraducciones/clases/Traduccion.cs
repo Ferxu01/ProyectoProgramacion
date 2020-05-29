@@ -18,7 +18,7 @@ namespace ProyectoTraducciones.clases
 
         public Traduccion(int codigo, string original, string traducida, string idioma, string tipo)
         {
-            this.codigo = codigo; //Opcional en constructor
+            this.codigo = codigo;
             nomOriginal = original;
             nomTraducida = traducida;
             rutaActual = "./../../files";

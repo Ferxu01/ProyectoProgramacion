@@ -27,15 +27,13 @@ namespace ProyectoTraducciones
             //Buscar en el dictionary el codigo de la traducción a editar
             tradSeleccionada = lista.Buscar(codigoTraduccion);
 
-            //Colocar los datos del objeto con su valor en cada control
+            //Colocar los datos de la traducción en cada control
             codigoTraduccionEditar.Text = tradSeleccionada.Codigo.ToString();
             palabraOriginalEditar.Text = tradSeleccionada.NomOriginal;
             palabraTraducidaEditar.Text = tradSeleccionada.NomTraducida;
 
             string idioma = tradSeleccionada.Idioma;
             string tipo = tradSeleccionada.Tipo;
-
-            //Obtener index idioma y tipo
             int codIdioma = lista.GetIndexIdioma(idioma);
             int codTipo = lista.GetIndexTipo(tipo);
 
@@ -68,12 +66,10 @@ namespace ProyectoTraducciones
 
         private void btnEditarTraduccion_Click(object sender, EventArgs e)
         {
-            //Se obtiene la traducción desde el constructor
             Traduccion tradEditar = tradSeleccionada;
 
             string originalEditar = palabraOriginalEditar.Text;
             string traducidaEditar = palabraTraducidaEditar.Text;
-
             int indexIdiomaEditar = dropDownIdiomaEditar.SelectedIndex;
             int indexTipoEditar = dropDownTipoEditar.SelectedIndex;
 

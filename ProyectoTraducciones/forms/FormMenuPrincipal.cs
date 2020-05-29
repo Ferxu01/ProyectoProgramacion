@@ -40,7 +40,6 @@ namespace ProyectoTraducciones
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            //Se cargan las traducciones de los ficheros
             lista.CargarTraducciones();
         }
 
@@ -71,7 +70,7 @@ namespace ProyectoTraducciones
 
         private void GuardarDatos(object sender, FormClosingEventArgs e)
         {
-            DialogResult ventana = MessageBox.Show("¿Está seguro de que quiere cerrar el programa?", "Cerrar",
+            DialogResult ventana = MessageBox.Show("¿Está seguro de que quiere cerrar el programa? Se guardarán los datos", "Cerrar",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
             if (ventana == DialogResult.OK)

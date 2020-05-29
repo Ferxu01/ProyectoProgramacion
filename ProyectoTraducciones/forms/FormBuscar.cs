@@ -24,6 +24,8 @@ namespace ProyectoTraducciones
             CargarDesplegableTipos();
 
             lista.MostrarTraducciones(listaMostrarTraduccionBuscada);
+
+            lista.ResetearControlesFormulario(dropDownIdiomaBuscar,dropDownTipoBuscar,nombreOriginalTraduccionBuscar,null);
         }
 
         private void btnCerrarFormulario_Click(object sender, EventArgs e)
@@ -34,24 +36,22 @@ namespace ProyectoTraducciones
         private void CargarDesplegableIdiomas()
         {
             ListaTraducciones lista = new ListaTraducciones();
+
             foreach (string linea in lista.CargarListaIdiomas())
-            {
                 dropDownIdiomaBuscar.Items.Add(linea);
-            }
         }
 
         private void CargarDesplegableTipos()
         {
             ListaTraducciones lista = new ListaTraducciones();
+
             foreach (string linea in lista.CargarListaTipos())
-            {
                 dropDownTipoBuscar.Items.Add(linea);
-            }
         }
 
         private void btnBuscarTraduccion_Click(object sender, EventArgs e)
         {
-            //Filtro de búsqueda por desplegable
+            //Filtro de búsqueda por desplegables
             int indexIdioma = dropDownIdiomaBuscar.SelectedIndex;
             string idioma = lista.GetNomIdioma(indexIdioma);
             int indexTipo = dropDownTipoBuscar.SelectedIndex;
