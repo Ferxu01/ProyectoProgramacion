@@ -67,13 +67,7 @@ namespace ProyectoTraducciones.clases
         //Método para buscar la traducción a editar
         public Traduccion Buscar(int codigo)
         {
-            foreach (KeyValuePair<int,Traduccion> lista in listaTraducciones)
-            {
-                if (lista.Key == codigo)
-                    return lista.Value;
-            }
-
-            return null;
+            return listaTraducciones[codigo];
         }
 
         public Dictionary<int,Traduccion> ListaTrads
@@ -420,11 +414,6 @@ namespace ProyectoTraducciones.clases
                 columna.SubItems.Add(list.Value.NomTraducida);
                 listView.Items.Add(columna);
             }
-        }
-
-        public int GetCodigoInicial(int ultCodigo)
-        {
-            return ultCodigo;
         }
 
         public void ResetearControlesFormulario(ComboBox dropDownIdioma, ComboBox dropDownTipo, TextBox inputOriginal, TextBox inputTraducida)

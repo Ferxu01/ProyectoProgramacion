@@ -25,7 +25,7 @@ namespace ProyectoTraducciones
             CargarDesplegableTipos();
 
             //Obtener el código del último elemento guardado en el dictionary
-            codigo = lista.GetCodigoInicial(lista.ListaTrads.Count);
+            codigo = lista.ListaTrads.Count();
         }
 
         private void CargarDesplegableIdiomas()
